@@ -2,7 +2,7 @@
 let attractions;
 
 // fetch data from provided link
-fetch('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9d7f28c1-b3cb-41cc-b1ab-c42f5b62beeb/attractions.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20200916%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20200916T170255Z&X-Amz-Expires=86400&X-Amz-Signature=511c79a0b253f89b7ae0f0ef619fa8d4377553fc39e1ea3efcc41c204fa794d7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22attractions.json%22')
+fetch('./attractions.json')
     .then(response => response.json())
     .then(data => {
 		attractions = data;
